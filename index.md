@@ -1,7 +1,7 @@
 ## Tracking Early Mammalian Organogenesis – Prediction and Validation of Differentiation Trajectories at Whole Organism Scale
 
-**List of authors to be added** 
 
+**Ivan Imaz-Rosshandler<sup>3,\*</sup>,Christina Rode<sup>4,\*</sup>,Carolina Guibentif<sup>5,\*</sup>,Mai-Linh Ton<sup>1,2</sup>,Parashar Dhapola<sup>10</sup>, Daniel Keitley<sup>6</sup>,Ricard Argelaguet<sup>11</sup>, Göran Karlsson<sup>10</sup>, Marella de Brujin<sup>4</sup>, John Marioni<sup>7,8,9</sup>, Berthold Göttgens<sup>1,2</sup>**
 
 ### Table of Contents
 
@@ -22,20 +22,14 @@ Early organogenesis represents a key step in animal development, whereby pluripo
 
 This data is an extension of a previously reported scRNA-Seq atlas covering mouse gastrulation and the early initiation of organogenesis through a densely sampled time-course of 6h sampling intervals from E6.5 to E8.5 (Pijuan-Sala B., Griffiths J. A., Guibentif C. et al., 2019) with newly sampled time points (E8.75-E9.5) as well as one overlapping time point (E8.5) to facilitate data integration. Combined, the new ‘extended’ atlas, ranging from E6.5 to E9.5 contains 430,339 cells across 13 time points spanning 3 days of mouse development 
 
-Various forms of the transcriptomics data are available [here](to be located at JCBC or UCSC server) for loading into R and python. 
+Various forms of the transcriptomics data such as raw counts, normalised counts, dimensionality reductions and metadata are available [here](https://cloud.mrc-lmb.cam.ac.uk/s/yxq7FRtYsLyF3jQ) for loading into R and python. 
 
 | File name                                                    | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| `data.h5ad`                                                | AnnData object with raw counts for processing with [scanpy](https://scanpy.readthedocs.io/en/stable/index.html). |
-| `data_processed.h5ad`                                                  | AnnData object with log normalised counts, metadata and main batch corrected layouts. |
-| `sce.rds`                                                  | Contains a `SingleCellExperiment` object for processing in R. |
-| `counts.mtx`                                               | Counts matrix in MatrixMarket format                         |
-| `logcounts.mtx`                                            | Normalised logcounts in MatrixMarket format                  |
-| `meta.tsv`                                                 | Per-cell observations (e.g. sample, cell type annotation, stage) |
-| `genes.tsv`                                                | Ensembl codes and gene names for the scRNA-seq features.     |
-| `sizefactors.tsv`                                          | Normalisation size factors computed for each cell using scran. |
-| `corrected_pcs.tsv`                                        | The top 50 principal components resulting from fastMNN batch correction. |
-| `r_umap.tsv` `r_tsne.tsv` `r_fa.tsv` `r_umap3d.tsv` | List of DataFrames containing coordinates for reduced dimensionality representations (e.g. UMAP, TSNE, PCA). |
+| `embryo_scarfweb.h5ad`                                                | AnnData object with raw counts for processing with [scanpy](https://scanpy.readthedocs.io/en/stable/index.html). |
+| `embryo_raw_counts.h5ad`                                                  | AnnData object with log normalised counts, metadata and main batch corrected layouts. |
+| `embryo_sce.rds`                                                  | Contains a `SingleCellExperiment` object for processing in R. |
+| `embryo_counts.rds`                                               | Counts matrix in sparse format for processing in R.                         |
 
 Raw scRNA-seq files have been deposited in arrayexpress under the accession number E-MTAB-11763 (This project is under curation and will remain temporarly private). For details of the other, externally generated datasets used in our analysis, see the methods section of the paper. 
 
@@ -79,19 +73,23 @@ General queries can be directed to [Bertie Göttgens](bg200@cam.ac.uk) , [John M
 
 2. *Wellcome-Medical Research Council Cambridge Stem Cell Institute, University of Cambridge, Cambridge, UK*
 
-3. *Department of Zoology, University of Cambridge, Cambridge, UK*
+3. *MRC Laboratory of Molecular Biology, Cambridge, UK* 
 
-4. *Department of Microbiology and Immunology, University of Gothenburg, Gothenburg, Sweden*
+4. *MRC Molecular Hematology Unit, MRC Weatherall Institute of Molecular Medicine, Raadcliffe Department of Medicine, University of Oxford, UK*
 
-5. *Department of Pathology & Imaging, Novo Nordisk, Måløv, Denmark*
+5. *Department of Microbiology and Immunology, University of Gothenburg, Gothenburg, Sweden*
 
-6. *Medical Research Council Laboratory of Molecular Biology, Cambridge, UK*
+6. *Department of Zoology, University of Cambridge, Cambridge, UK*
 
 7. *Wellcome Sanger Institute, Wellcome Genome Campus, Cambridge, UK*
 
 8. *European Molecular Biology Laboratory European Bioinformatics Institute, Cambridge, UK*
 
 9. Cancer Research UK Cambridge Institute, University of Cambridge Cambridge, UK
+
+10. *Division of Molecular Hematology, Lund Stem Cell Center, Lund University, Sweden*
+
+11. *Los Altos lab*
 
    \* Authors contributed equally
 
