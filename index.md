@@ -22,13 +22,14 @@ Early organogenesis represents a key step in animal development, whereby pluripo
 
 This data is an extension of a previously reported scRNA-Seq atlas covering mouse gastrulation and the early initiation of organogenesis through a densely sampled time-course of 6h sampling intervals from E6.5 to E8.5 (Pijuan-Sala B., Griffiths J. A., Guibentif C. et al., 2019) with newly sampled time points (E8.75-E9.5) as well as one overlapping time point (E8.5) to facilitate data integration. Combined, the new ‘extended’ atlas, ranging from E6.5 to E9.5 contains 430,339 cells across 13 time points spanning 3 days of mouse development 
 
-Various forms of the transcriptomics data such as raw counts, normalised counts, dimensionality reductions and metadata are available [here](https://cloud.mrc-lmb.cam.ac.uk/s/yxq7FRtYsLyF3jQ) for loading into R and python. 
+Various forms of the transcriptomics data such as raw counts, normalised counts, dimensionality reductions and metadata are available [here](https://cloud.mrc-lmb.cam.ac.uk/s/yxq7FRtYsLyF3jQ) for loading into R and python.
+
 | File name                                                    | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| `embryo_scarfweb.h5ad`                                                | AnnData object with raw counts for processing with [scanpy](https://scanpy.readthedocs.io/en/stable/index.html). |
-| `embryo_raw_counts.h5ad`                                                  | AnnData object with log normalised counts, metadata and main batch corrected layouts. |
-| `embryo_sce.rds`                                                  | Contains a `SingleCellExperiment` object for processing in R. |
-| `embryo_counts.rds`                                               | Counts matrix in sparse format for processing in R.                         |
+| `embryo_scarfweb.h5ad`                                       | AnnData object with raw counts for processing with [scanpy](https://scanpy.readthedocs.io/en/stable/index.html). |
+| `embryo_raw_counts.h5ad`                                     | AnnData object with log normalised counts, metadata and main batch corrected layouts. |
+| `embryo_sce.rds`                                             | Contains a `SingleCellExperiment` object for processing in R. |
+| `embryo_counts.rds`                                          | Counts matrix in sparse format for processing in R.           |
 
 Raw scRNA-seq files have been deposited in arrayexpress under the accession number E-MTAB-11763 (This project is under review and will remain temporarly private). For details of the other, externally generated datasets used in our analysis, see the methods section of the paper. 
 
