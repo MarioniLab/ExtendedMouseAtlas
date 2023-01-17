@@ -1,7 +1,7 @@
 ## Tracking Early Mammalian Organogenesis – Prediction and Validation of Differentiation Trajectories at Whole Organism Scale
 
 
-**Ivan Imaz-Rosshandler<sup>1,2,3,\*</sup>,Christina Rode<sup>4,\*</sup>,Carolina Guibentif<sup>5,\*</sup>,Mai-Linh Ton<sup>1,2</sup>,Parashar Dhapola<sup>10</sup>, Daniel Keitley<sup>6</sup>,Ricard Argelaguet<sup>11,12</sup>,Fernando J. Calero-Nieto<sup>2</sup>,Göran Karlsson<sup>10</sup>, Marella de Brujin<sup>4</sup>, John Marioni<sup>7,8,9</sup>, Berthold Göttgens<sup>1,2</sup>**
+**Ivan Imaz-Rosshandler<sup>1,2,3,\*</sup>, Christina Rode<sup>4,\*</sup>, Carolina Guibentif<sup>5,\*</sup>, Mai-Linh Ton<sup>1,2</sup>, Parashar Dhapola<sup>10</sup>, Daniel Keitley<sup>6</sup>, Ricard Argelaguet<sup>11,12</sup>, Fernando J. Calero-Nieto<sup>2</sup>, Marella de Brujin<sup>4</sup>, John Marioni<sup>7,8,9</sup>, Berthold Göttgens<sup>1,2</sup>**
 
 ### Table of Contents
 
