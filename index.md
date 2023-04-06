@@ -27,8 +27,7 @@ Various forms of the transcriptomics data such as raw counts, normalised counts,
 
 | File name                                                    | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| `embryo_counts.h5ad`                                                | AnnData object with UMI counts and metadata for processing with [scanpy](https://scanpy.readthedocs.io/en/stable/index.html). Function read\_h5ad(filename, ...) is recommended. |
-| `embryo_logcounts.h5ad`                                                  | AnnData object with log normalised UMI counts, metadata and batch corrected layouts. Function read\_h5ad(filename, ...) is recommended. |
+| `embryo_complete.h5ad`                                                 | AnnData object with log normalised UMI counts and raw counts the .raw layer, metadata, batch corrected PCA and other layouts (eg., UMAP). Function scanpy.read(filename, ...) is recommended. |
 | `embryo_sce.rds`                                                  | Contains a `SingleCellExperiment` object with counts, metadata and batch corrected layouts for processing in R. Pre-computed library size factors can be accessed to normalise the data. |
 | `embryo_counts.tar.gz`                                               | Counts matrix in sparse format (`mtx`) with cell and gene metadata files. |
 | `metadata_cells.csv`                                               | Cell metadata. |
@@ -36,7 +35,7 @@ Various forms of the transcriptomics data such as raw counts, normalised counts,
 | `umap_layout.csv`                                               | UMAP layout. |
 | `pca_batch_corrected.csv`                                               | Batch corrected PCA with MNN. |
 
-Raw scRNA-seq files have been deposited in arrayexpress under the accession number E-MTAB-11763. For details of the other, externally generated datasets used in our analysis, see the methods section of the paper. 
+Raw scRNA-seq files have been deposited in arrayexpress under the accession number [E-MTAB-11763](https://www.ebi.ac.uk/biostudies/arrayexpress/studies/E-MTAB-11763?query=E-MTAB-11763). For details of the other, externally generated datasets used in our analysis, see the methods section of the paper. 
 
 Note: Smart-Seq2 data generated in this project will be soon made public.
 
@@ -50,7 +49,7 @@ IMPORTANT: This webpage is currently under development.
 
 #### UCSC Cell browser
 
-To be added soon. 
+This data can be explored and downloaded from the [UCSC cell browser](https://cells-test.gi.ucsc.edu/?ds=ext-mouse-atlas). 
 
 ### Code availability<a name="code" />
 
