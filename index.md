@@ -1,16 +1,16 @@
 ## Tracking Early Mammalian Organogenesis – Prediction and Validation of Differentiation Trajectories at Whole Organism Scale
 
 
-**Ivan Imaz-Rosshandler<sup>1,2,3,\*</sup>, Christina Rode<sup>4,\*</sup>, Carolina Guibentif<sup>5,\*</sup>, Mai-Linh Ton<sup>1,2</sup>, Parashar Dhapola<sup>10</sup>, Daniel Keitley<sup>6</sup>, Ricard Argelaguet<sup>11,12</sup>, Fernando J. Calero-Nieto<sup>2</sup>, Jennifer Nichols<sup>2</sup>, John C. Marioni<sup>7,8,9,\*\*</sup>, Marella de Bruijn<sup>4,\*\*</sup>, Berthold Göttgens<sup>1,2,\*\*</sup>**
+**Ivan Imaz-Rosshandler<sup>1,2,3,\*</sup>, Christina Rode<sup>4,\*</sup>, Carolina Guibentif<sup>5,\*</sup>, Luke T G Harland<sup>1,2,\*</sup>, Mai-Linh Ton<sup>1,2</sup>, Parashar Dhapola<sup>10</sup>, Daniel Keitley<sup>6</sup>, Ricard Argelaguet<sup>11,12</sup>, Fernando J. Calero-Nieto<sup>2</sup>, Jennifer Nichols<sup>2</sup>, John C. Marioni<sup>7,8,9,\*\*</sup>, Marella de Bruijn<sup>4,\*\*</sup>, Berthold Göttgens<sup>1,2,\*\*</sup>**
 
 ### Table of Contents
 
 1. [Paper abstract](#Abstract)
-2. [Data availability](#data)
-3. [Explore the data](#explore)
-4. [Code availability](#code)
-5. [Contact](#contact)
-6. [Other links](#links)
+2. [Data availability](#Data-availability)
+3. [Explore the data](#Explore-the-data)
+4. [Code availability](#Code-availability)
+5. [Contact](#Support-or-Contact)
+6. [Other links](#Other-links)
 
    
 
@@ -18,16 +18,13 @@
 
 Early organogenesis represents a key step in animal development, where pluripotent cells divide and diversify to initiate formation of all major organs. Here, we used scRNA-Seq to profile over 300,000 single cell transcriptomes sampled in 6 hour intervals from mouse embryos between E8.5 and E9.5. Combining this dataset with our previous E6.5 to E8.5 atlas resulted in a densely-sampled time course of over 400,000 cells from early gastrulation to organogenesis. Computational lineage reconstruction at full organismal scale identified complex waves of blood and endothelial development, including a new molecular programme for somite-derived endothelium. To assess developmental fates across the primitive streak, we dissected the E7.5 primitive streak into four adjacent regions, performed scRNA-Seq and predicted cell fates computationally. We next defined early developmental state/fate relationships experimentally by a combination of orthotopic grafting, microscopic analysis of graft contribution as well as scRNA-Seq to transcriptionally determine cell fates of the grafted primitive streak regions after 24h of in vitro embryo culture. Experimentally determined fate outcomes were in good agreement with the fates predicted computationally, thus demonstrating how classical grafting experiments can be revisited to establish high-resolution cell state/fate relationships. Such interdisciplinary approaches will benefit future studies in both developmental biology as well as guide the in vitro  production of cells for organ regeneration and repair.
 
-### Data availability<a name="data" />
+### Data availability
 
-This data is an extension of a previously reported scRNA-Seq atlas covering mouse gastrulation and the early initiation of organogenesis through a densely sampled time-course of 6h sampling intervals from E6.5 to E8.5 (Pijuan-Sala B., Griffiths J. A., Guibentif C. et al., 2019) with newly sampled time points (E8.75-E9.5) as well as one overlapping time point (E8.5) to facilitate data integration. Combined, the new ‘extended’ atlas, ranging from E6.5 to E9.5 contains 430,339 cells across 13 time points spanning 3 days of mouse development 
-
-Various forms of the transcriptomics data such as raw counts, normalised counts, dimensionality reductions and metadata are available [here](https://cloud.mrc-lmb.cam.ac.uk/s/yxq7FRtYsLyF3jQ) for loading into R and python. 
-
+[This data](https://bioinformatics.stemcells.cam.ac.uk/rlh60/Supplemental/ExtendedMouseAtlas/) is an extension of a previously reported scRNA-Seq atlas covering mouse gastrulation and the early initiation of organogenesis through a densely sampled time-course of 6h sampling intervals from E6.5 to E8.5 (Pijuan-Sala B., Griffiths J. A., Guibentif C. et al., 2019) with newly sampled time points (E8.75-E9.5) as well as one overlapping time point (E8.5) to facilitate data integration. Combined, the new ‘extended’ atlas, ranging from E6.5 to E9.5 contains 430,339 cells across 13 time points spanning 3 days of mouse development. 
 
 | File name                                                    | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| `embryo_complete.h5ad`                                                 | AnnData object with log normalised UMI counts and raw counts the .raw layer, metadata, batch corrected PCA and other layouts (eg., UMAP). Function scanpy.read(filename, ...) is recommended. |
+| `embryo_complete.h5ad`                                                | AnnData object with log normalised UMI counts and raw counts the .raw layer, metadata, batch corrected PCA and other layouts (eg., UMAP). Function scanpy.read(filename, ...) is recommended. |
 | `embryo_sce.rds`                                                  | Contains a `SingleCellExperiment` object with counts, metadata and batch corrected layouts for processing in R. Pre-computed library size factors can be accessed to normalise the data. |
 | `embryo_counts.tar.gz`                                               | Counts matrix in sparse format (`mtx`) with cell and gene metadata files. |
 | `metadata_cells.csv`                                               | Cell metadata. |
@@ -35,33 +32,23 @@ Various forms of the transcriptomics data such as raw counts, normalised counts,
 | `umap_layout.csv`                                               | UMAP layout. |
 | `pca_batch_corrected.csv`                                               | Batch corrected PCA with MNN. |
 
-Raw scRNA-seq files have been deposited in arrayexpress under the accession number [E-MTAB-11763](https://www.ebi.ac.uk/biostudies/arrayexpress/studies/E-MTAB-11763?query=E-MTAB-11763). For details of the other, externally generated datasets used in our analysis, see the methods section of the paper. 
+Raw scRNA-seq files have been deposited in arrayexpress under the accession number [E-MTAB-11763](https://www.ebi.ac.uk/biostudies/arrayexpress/studies/E-MTAB-11763?query=E-MTAB-11763) and [E-MTAB-13645](https://www.ebi.ac.uk/biostudies/arrayexpress/studies/E-MTAB-13645/sdrf?full=true). For details of the other, externally generated datasets used in our analysis, see the methods section of the paper. 
 
-Note: Smart-Seq2 data generated in this project will be soon made public.
+### Explore the data
 
-### Explore the data<a name="explore" />
-
-#### Shiny app 
-
-The data can be explored after logging into [shiny app](http://extendedmouseatlas.com/).
+#### Shiny app
  
-IMPORTANT: This webpage is currently under development.
+IMPORTANT: The shiny app is being upgraded and a new link will be added soon.
 
 #### UCSC Cell browser
 
 This data can be explored and downloaded from the [UCSC cell browser](https://cells-test.gi.ucsc.edu/?ds=ext-mouse-atlas). 
 
-### Code availability<a name="code" />
+### Support or Contact
 
-To be added soon.
+General queries can be directed to [Bertie Göttgens](mailto:bg200@cam.ac.uk) , [John Marioni](mailto:marioni@ebi.ac.uk). For issues relating to the data or code, you can email Ivan Imaz-Rosshandler at [irosshandler@altoslabs.com](mailto:irosshandler@altoslabs.com). 
 
-
-### Support or Contact<a name="contact" />
-
-General queries can be directed to [Bertie Göttgens](mailto:bg200@cam.ac.uk) , [John Marioni](mailto:marioni@ebi.ac.uk). For issues relating to the data or code, you can email Ivan Imaz-Rosshandler at [ivanir@mrc-lmb.cam.ac.uk](mailto:ivanir@mrc-lmb.cam.ac.uk).
-
-
-### Other links<a name="links" />
+### Other links
 
 [Göttgens lab website](https://www.stemcells.cam.ac.uk/people/pi/gottgens)
 
@@ -70,7 +57,6 @@ General queries can be directed to [Bertie Göttgens](mailto:bg200@cam.ac.uk) , 
 [de Bruijn lab website](https://www.imm.ox.ac.uk/research/research-groups/de-bruijn-group-developmental-haematopoiesis)
 
 [Shiny application of E6.5-E8.5 atlas of mouse gastrulation and early organogenesis](https://marionilab.cruk.cam.ac.uk/MouseGastrulation2018/)
-
 
 ###### Affiliations
 
@@ -100,5 +86,7 @@ General queries can be directed to [Bertie Göttgens](mailto:bg200@cam.ac.uk) , 
 
 
 \* Authors contributed equally
+
 \*\* Corresponding authors
+
    
